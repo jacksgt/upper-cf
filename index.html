@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="//use.edgefonts.net/vera-sans.js"></script>
+  <title>Upper.cf - Upload Files. Simple.</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script type="text/javascript">function viewTOS() { document.getElementById("overlay").style.display = "block"; }</script>
+</head>
+<body>
+<div id="wrapper">
+  <a href="http://www.upper.cf" target="_self" class="nounderline">
+  <header>
+    <div id="banner"><div id="maincolor">Upper</div><div id="subcolor">.cf</div></div>
+    <div id="description">Upload Files. Simple.</div>
+  </header>
+  </a>
+  <main>
+    <div id="mainform">
+      <form name="fileform" action="upload.php" method="POST" enctype="multipart/form-data">
+	<div id="wrapperfile">
+	  <input type="file" name="file" required>
+	</div>
+	<div id="wrappersubmit">
+	  <input type="submit" value="Upload">
+	</div>
+      </form>
+      	<div id="hint"> 
+	  1. Select the file from your device.
+	  <br>
+	  2. Click "Upload" 
+	  <br>
+	  3. The file will be uploaded and you will get the URL!
+	</div>
+    </div>
+    <div id="wrapperwarnings">
+      <div id="warning">This is a warning</div>
+    </div>
+    <div id="ad1" class="ads"> </div>
+    <div id="ad2" class="ads"> </div>
+  </main>
+  <!--<div id="info-box">-->
+  <div id="overlay">
+    <div id="terms-of-service">
+      <div class="caption">TERMS OF SERVICE</div>
+      <p>1. You may not use Upper.cf for illegal activities. You are not allowed to hide URLs to malicious websites by using the Upper.cf URL-Service. </p>
+      <p>2. The administrator of Upper.cf reserves the right to delete any file at any point in time, even without strong suspicion.</p>
+      <p>3. By attacking or abusing the Upper.cf-Service you are making yourself guilty of an offence. Local laws apply. </p>
+      <p>4. The administrator of this website is not responsible for any user-posted content.</p>
+    </div>
+  </div>
+  <!-- </div>-->
+</div>
+  <footer>
+    By using the service <a href="http://upper.cf">Upper.cf</a> you are agreeing to our <div id="terms" onclick="viewTOS()">Terms of Service</div>
+  </footer>
+</body>
+</html>
