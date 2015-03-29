@@ -5,6 +5,7 @@ function clean($string) {
 	 $string = strtolower($string); // Convert to lowercase
 	 return $string;
 }
+$maxTries = 50;
 $server = "upper.cf/testing/ul/";
 $fileName = clean($_FILES["file"]["name"]);
 $fileTmpLoc = $_FILES["file"]["tmp_name"];
@@ -13,6 +14,17 @@ $fileTmpLoc = $_FILES["file"]["tmp_name"];
 //$fileErrorMsg = $_FILES["file"]["error"]; // 0 for false... and 1 for true
 
 $path = getcwd() . "/ul/" . $fileName;
+
+while(file_exists($path) && $i < 50) {
+    $buffer = explode(".", $fileName);
+    if(count($buffer) == 1) { // check if there is any file extension
+	$buffer[ count($buffer) - 1 ] .= rand(1,15);
+    } else {
+	$buffer[ count($buffer) - 2 ] .= rand(1,15) . ".";
+    }
+    $fileName = implode($buffer);
+    $path = getcwd() . "/ul/" . $fileName;
+}
 
 if(file_exists($path)) {
    echo "ERROR: File already exists!";
