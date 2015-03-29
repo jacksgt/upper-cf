@@ -6,7 +6,7 @@ function clean($string) {
 	 return $string;
 }
 
-$server = "upper.cf/ul/";
+$server = "upper.cf/testing/ul/";
 $fileName = clean($_FILES["file"]["name"]);
 $fileTmpLoc = $_FILES["file"]["tmp_name"];
 //$fileType = $_FILES["file"]["type"];
