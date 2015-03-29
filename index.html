@@ -19,14 +19,17 @@
     <div id="mainform">
       <form id="fileform" name="fileform">
 	<div id="wrapperfile">
-	  <input type="file" name="file" id="file" required>
+	  <input type="file" name="file" id="file">
+	  <div id="dd-wrapper">
+
+	  </div>
 	</div>
 	<div id="wrappersubmit">
 	  <input type="submit" value="Upload">
 	</div>
       </form>
       	<div id="hint"> 
-	  1. Select the file from your device.
+	  1. Drag&Drop or select the file from your device manually.
 	  <br>
 	  2. Click "Upload" 
 	  <br>
@@ -34,16 +37,12 @@
 	</div>
     </div>
     <div id="uploading">
-	Uploading
+	Uploading ...<br>
     </div>
     <div id="finished">
-	Finished
+      <br> Your file has been saved to: <br>
+      <input type="text" id="file-output" autofocus onfocus="this.select()">
     </div>
-    <div id="wrapperwarnings">
-      <div id="warning">This is a warning</div>
-    </div>
-    <div id="ad1" class="ads"> </div>
-    <div id="ad2" class="ads"> </div>
   </main>
   <!--<div id="info-box">-->
   <div id="overlay">

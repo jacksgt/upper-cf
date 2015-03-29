@@ -20,7 +20,7 @@ if(file_exists($path)) {
 
 if($fileTmpLoc) {
     if(move_uploaded_file($fileTmpLoc, $path)) {
-	echo $server . $fileName;
+	echo $server . $fileName . ";EOF"; // due to stupid CwCity Ads
     } else {
 	echo "ERROR: Upload of " . $fileName . "failed";
     }

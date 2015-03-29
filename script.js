@@ -29,37 +29,53 @@ function upload() {
 window.onload = function () {
     document.getElementById("fileform").onsubmit = function(event) {
 	event.preventDefault();
-	getId("mainform").style.transition = "opacity 0.25s ease-in-out";
+	getId("mainform").style.transition = "all 0.25s ease-in-out";
 	getId("mainform").style.height = "0";
 	getId("mainform").style.opacity = "0";
-
-	getId("uploading").style.transition = "opacity 0.25s ease-in-out";
-	getId("uploading").style.height = "130px";
-	getId("uploading").style.opacity = "1";
-
-	getId("mainform").style.transition = "display 0.5s";
 	getId("mainform").style.display = "none";
+	
+	getId("uploading").style.transition = "all 0.25s ease-in-out";
+	getId("uploading").style.height = "330px";
+	getId("uploading").style.opacity = "1";
 
 	upload();
     }
-
-    
+    selectGIF();
 }
 
 function updatePage(response) {
     getId("mainform").style.display = "none";
     
-    getId("uploading").style.transition = "opacity 0.25s ease-in-out";
+    getId("uploading").style.transition = "all 0.25s ease-in-out";
     getId("uploading").style.height = "0";
     getId("uploading").style.opacity = "0";
-
-    getId("finished").style.transition = "opacity 0.25s ease-in-out";
-    getId("finished").style.height = "130px";
+    getId("uploading").style.display = "none";
+    
+    getId("finished").style.transition = "all 0.5s ease-in-out";
+    getId("finished").style.height = "330px";
     getId("finished").style.opacity = "1";
 
     if( (response.search("Error") == -1) && (response.search("ERROR") == -1) ) {
-	getId("finished").innerHTML = "Your file has been saved to " + response;
+	response = response.split(";EOF");
+	getId("file-output").value = "http://" + response[0];
     } else {
-	getId("finished").innerHTML = "Sorry, somthing went wrong :-(";
+	getId("finished").innerHTML = "Sorry, something went wrong :-(";
     }
+}
+
+var GIFLIST = ["amazing-shape.gif",   "dancing-ninja.gif",                   "Hovering-MOON-MOON.gif",
+	       "I-love-trains.gif",   "Infinite-fall.gif",  "Internet-maintenance.gif",  "Like-a-bus.gif"];
+
+function selectGIF() {
+    var index = Math.floor( Math.random() * GIFLIST.length );
+    var url = "/testing/gifs/" + GIFLIST[index];
+
+    var pic = document.createElement("img");
+    pic.src = url;
+    pic.alt = "Funny GIF here";
+    pic.style.borderRadius = "5px";
+    pic.height = "200";
+    pic.style.marginTop = "10px";
+    getId("uploading").appendChild(pic);
+    
 }
