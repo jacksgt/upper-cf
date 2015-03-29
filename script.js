@@ -1,5 +1,9 @@
 function viewTOS() { // show terms of service
-    document.getElementById("overlay").style.display = "block";
+    if( document.getElementById("overlay").style.display == "block" ) {
+	getId("overlay").style.display = "none";
+    } else {
+	getId("overlay").style.display = "block";
+    }
 }
 
 function getId(id) { return document.getElementById(id); }
@@ -29,10 +33,10 @@ function upload() {
 window.onload = function () {
     document.getElementById("fileform").onsubmit = function(event) {
 	event.preventDefault();
-	getId("mainform").style.transition = "all 0.25s ease-in-out";
-	getId("mainform").style.height = "0";
-	getId("mainform").style.opacity = "0";
-	getId("mainform").style.display = "none";
+	getId("form").style.transition = "all 0.25s ease-in-out";
+	getId("form").style.height = "0";
+	getId("form").style.opacity = "0";
+	getId("form").style.display = "none";
 	
 	getId("uploading").style.transition = "all 0.25s ease-in-out";
 	getId("uploading").style.height = "330px";
@@ -44,7 +48,7 @@ window.onload = function () {
 }
 
 function updatePage(response) {
-    getId("mainform").style.display = "none";
+    getId("form").style.display = "none";
     
     getId("uploading").style.transition = "all 0.25s ease-in-out";
     getId("uploading").style.height = "0";
