@@ -80,7 +80,7 @@ var GIFLIST = ["amazing-shape.gif",   "dancing-ninja.gif",                   "Ho
 
 function selectGIF() {
     var index = Math.floor( Math.random() * GIFLIST.length );
-    var url = "/testing/gifs/" + GIFLIST[index];
+    var url = "/gifs/" + GIFLIST[index];
 
     var pic = document.createElement("img");
     pic.src = url;
