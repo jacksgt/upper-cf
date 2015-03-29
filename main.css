@@ -20,8 +20,9 @@ main { margin-top: 15px; padding: 10px 50px 10px 50px; color: white; }
 
 #wrapperfile { }
 #dd-wrapper {
-    margin-top: 15px; width: 200px; height: 150px; width: 100%;
-    border-color: #909090; border-radius: 10px; border-style: dashed; box-sizing: border-box; 
+    margin-top: 15px; width: 200px; height: 150px; width: 100%; box-sizing: border-box; 
+    font-style: italic; background-color: rgba(50,50,50,0.3); color: #909090; font-size: 17px; font-weight: 400; 
+    border-color: #909090; border-radius: 10px; border-style: dashed; 
 }
 #wrappersubmit { margin: 0 auto; margin-top: 20px;}
 
