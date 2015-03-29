@@ -5,8 +5,8 @@ function clean($string) {
 	 $string = strtolower($string); // Convert to lowercase
 	 return $string;
 }
-$maxTries = 50;
-$server = "upper.cf/testing/ul/";
+
+$server = "upper.cf/ul/";
 $fileName = clean($_FILES["file"]["name"]);
 $fileTmpLoc = $_FILES["file"]["tmp_name"];
 //$fileType = $_FILES["file"]["type"];
@@ -15,7 +15,7 @@ $fileTmpLoc = $_FILES["file"]["tmp_name"];
 
 $path = getcwd() . "/ul/" . $fileName;
 
-while(file_exists($path) && $i < 50) {
+while(file_exists($path)) {
     $buffer = explode(".", $fileName);
     if(count($buffer) == 1) { // check if there is any file extension
 	$buffer[ count($buffer) - 1 ] .= rand(1,15);
