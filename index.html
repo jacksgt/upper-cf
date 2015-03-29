@@ -5,7 +5,7 @@
   <script src="//use.edgefonts.net/vera-sans.js"></script>
   <title>Upper.cf - Upload Files. Simple.</title>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <script type="text/javascript">function viewTOS() { document.getElementById("overlay").style.display = "block"; }</script>
+  <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -17,9 +17,9 @@
   </a>
   <main>
     <div id="mainform">
-      <form name="fileform" action="upload.php" method="POST" enctype="multipart/form-data">
+      <form id="fileform" name="fileform">
 	<div id="wrapperfile">
-	  <input type="file" name="file" required>
+	  <input type="file" name="file" id="file" required>
 	</div>
 	<div id="wrappersubmit">
 	  <input type="submit" value="Upload">
@@ -32,6 +32,12 @@
 	  <br>
 	  3. The file will be uploaded and you will get the URL!
 	</div>
+    </div>
+    <div id="uploading">
+	Uploading
+    </div>
+    <div id="finished">
+	Finished
     </div>
     <div id="wrapperwarnings">
       <div id="warning">This is a warning</div>
