@@ -75,8 +75,14 @@ function handleDragOver(event) {
     event.stopPropagation(); event.preventDefault(); event.dataTransfer.dropEffect = 'copy';
 }
 
-var GIFLIST = ["amazing-shape.gif",   "dancing-ninja.gif",                   "Hovering-MOON-MOON.gif",
-	       "I-love-trains.gif",   "Infinite-fall.gif",  "Internet-maintenance.gif",  "Like-a-bus.gif"];
+var GIFLIST = ["akward-moment.gif", "Infinite-fall.gif",
+	       "amazing-shape.gif", "Internet-maintenance.gif",	      
+	       "dancing-ninja.gif", "Like-a-bus.gif",
+	       "double-circle-rotation.gif", "loading-screen.gif",      
+	       "Grandeur-of-the-Universe.gif", "sport-rotation.gif",     
+	       "Hovering-MOON-MOON.gif","That-Horse-is-going-places.gif",
+	       "I-love-trains.gif", "This-gif-just-blew-my-mind.gif"
+	      ];
 
 function selectGIF() {
     var index = Math.floor( Math.random() * GIFLIST.length );
