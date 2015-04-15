@@ -2,12 +2,13 @@
 # Upload bash script for Upper.cf
 USAGE="upper-cf [OPTIONS] <FILE>";
 OPTIONS=" -p, --progress-bar: enables cURL progress bar (useful for bigger files)
- -s, --short-url creates a very short URL using Shorter.cf"; 
+ -s, --short-url creates a very short URL using Shorter.cf
+ -h, --help print this help text"; 
 
 UPPER_URL="http://upper.cf/upload.php";
 SHORTER_URL="http://shorter.cf/short-url.php";
 
-if [ ! "$1" ]; then
+if [ ! "$1" ] || [[ "$@" =~ "-h" ]] || [[ "$@" =~ "--help ]]; then
 	echo "ERROR: You need to specify a file!";
 	echo "Usage: $USAGE";
 	echo -e "Options: \n$OPTIONS";
