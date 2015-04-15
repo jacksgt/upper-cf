@@ -81,7 +81,8 @@ var GIFLIST = ["akward-moment.gif", "Infinite-fall.gif",
 	       "double-circle-rotation.gif", "loading-screen.gif",      
 	       "Grandeur-of-the-Universe.gif", "sport-rotation.gif",     
 	       "Hovering-MOON-MOON.gif","That-Horse-is-going-places.gif",
-	       "I-love-trains.gif", "This-gif-just-blew-my-mind.gif"
+	       "I-love-trains.gif", "This-gif-just-blew-my-mind.gif",
+		"loading-website-with-tractor.gif"
 	      ];
 
 function selectGIF() {
